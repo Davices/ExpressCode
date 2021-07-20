@@ -11,11 +11,13 @@ namespace ExpressCode.Services.Admin.Model
     public class ModelService:BaseService,IModelService
     {
         public IModelRepository Repository { get; set; }
-        public ModelGetOutput GetUser()
+        public List<ModelGetOutput> GetModel()
         {
             var da = Repository.ModelShow();
-            var entityDto = Mapper.Map<ModelGetOutput>(da);
+            var entityDto = Mapper.Map<List<ModelGetOutput>>(da);
             return entityDto;
         }
+
+        
     }
 }

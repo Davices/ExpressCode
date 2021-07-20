@@ -11,6 +11,8 @@ namespace ExpressCode.Services.Admin.Model
     [Intercept(typeof(AopTest))]
     public interface IModelService
     {
-        ModelGetOutput GetUser();
+       List<ModelGetOutput> GetModel();
+
+        
     }
 }

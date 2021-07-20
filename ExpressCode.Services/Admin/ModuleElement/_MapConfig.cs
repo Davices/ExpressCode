@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 using ExpressCode.Model;
 using ExpressCode.Model.Admin;
 using ExpressCode.Services.Admin.Model.Output;
+using ExpressCode.Services.Admin.ModuleElement.OutPut;
 
-namespace ExpressCode.Services.Admin.Model
+namespace ExpressCode.Services.Admin.ModuleElement
 {
-    public class _MapConfigM: Profile
+    public class _MapConfigME: Profile
     {
-        public _MapConfigM()
+        public _MapConfigME()
         {
             //查询
-            CreateMap<ModelEntity, ModelGetOutput>();
+            CreateMap<ModuleElementEntity, ModuleElementGetOutput>();
 
             //添加
-            //CreateMap<, UserEntity>();
+            //CreateMap <ModuleElementGetOutput, ModuleElementEntity> ();
 
         }
     }

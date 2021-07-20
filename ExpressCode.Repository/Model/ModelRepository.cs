@@ -14,13 +14,8 @@ namespace ExpressCode.Repository.Model
 
         public List<ModelEntity> ModelShow()
         {
-            string sql = "select CascadeId,Name from Module";
+            string sql = "select * from Module";
             return dBFactory.GetBaseRepository().Query<ModelEntity>(sql);           
-            //ModelEntity model = new ModelEntity();
-            //model.CascadeId = "12";
-            //model.Name = "张三";
-            //model.HotKey = "男";
-            //return model;
         }
     }
 }
