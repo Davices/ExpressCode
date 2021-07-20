@@ -8,7 +8,6 @@ namespace ExpressCode.Model.Admin
 {
     public class ModuleElementEntity:BaseEntity
     {
-        public string Id { get; set; }
         public string DomId	 { get; set; }
         public string Name	 { get; set; }
         public string Attr	 { get; set; }

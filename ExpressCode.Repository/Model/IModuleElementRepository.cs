@@ -15,5 +15,8 @@ namespace ExpressCode.Repository.Model
        List<ModuleElementEntity> ModuleElementShow();
 
        int ModuleLementDel(string ModuleElementId);
+
+       int ModuleLementAdd(ModuleElementEntity me);
+       int ModuleLementPut(ModuleElementEntity me);
     }
 }

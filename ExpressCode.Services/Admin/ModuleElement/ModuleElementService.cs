@@ -1,4 +1,6 @@
-﻿using ExpressCode.Repository.Model;
+﻿using ExpressCode.Model.Admin;
+using ExpressCode.Repository.Model;
+using ExpressCode.Services.Admin.ModuleElement.InPut;
 using ExpressCode.Services.Admin.ModuleElement.OutPut;
 using System;
 using System.Collections.Generic;
@@ -17,10 +19,25 @@ namespace ExpressCode.Services.Admin.ModuleElement
             var entityDto = Mapper.Map<List<ModuleElementGetOutput>>(da);
             return entityDto;
         }
+
+        public int ModuleLementAdd(ModuleElementPutInPut me)
+        {
+            var entityDto = Mapper.Map<ModuleElementEntity>(me);
+            var da = Repository.ModuleLementAdd(entityDto);
+            return da;
+        }
+
         public int ModuleLementDel(string ModuleElementId)
         {
             var da = Repository.ModuleLementDel(ModuleElementId);
             
+            return da;
+        }
+
+        public int ModuleLementPut(ModuleElementPutInPutPut me)
+        {
+            var entityDto = Mapper.Map<ModuleElementEntity>(me);
+            var da = Repository.ModuleLementPut(entityDto);
             return da;
         }
     }

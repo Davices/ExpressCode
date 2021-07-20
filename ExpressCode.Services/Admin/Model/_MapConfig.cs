@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ExpressCode.Model;
 using ExpressCode.Model.Admin;
 using ExpressCode.Services.Admin.Model.Output;
+using ExpressCode.Services.Admin.Model.Input;
 
 namespace ExpressCode.Services.Admin.Model
 {
@@ -18,8 +19,9 @@ namespace ExpressCode.Services.Admin.Model
             CreateMap<ModelEntity, ModelGetOutput>();
 
             //添加
-            //CreateMap<, UserEntity>();
-
+            CreateMap<ModelPutInput,ModelEntity>();
+            //修改
+            CreateMap<ModelPutInputPut,ModelEntity>();
         }
     }
 }

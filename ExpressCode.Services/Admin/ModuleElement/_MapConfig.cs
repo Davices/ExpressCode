@@ -8,6 +8,7 @@ using ExpressCode.Model;
 using ExpressCode.Model.Admin;
 using ExpressCode.Services.Admin.Model.Output;
 using ExpressCode.Services.Admin.ModuleElement.OutPut;
+using ExpressCode.Services.Admin.ModuleElement.InPut;
 
 namespace ExpressCode.Services.Admin.ModuleElement
 {
@@ -19,8 +20,10 @@ namespace ExpressCode.Services.Admin.ModuleElement
             CreateMap<ModuleElementEntity, ModuleElementGetOutput>();
 
             //添加
-            //CreateMap <ModuleElementGetOutput, ModuleElementEntity> ();
+           CreateMap <ModuleElementPutInPut, ModuleElementEntity> ();
 
+            //修改
+            CreateMap<ModuleElementPutInPutPut, ModuleElementEntity>();
         }
     }
 }

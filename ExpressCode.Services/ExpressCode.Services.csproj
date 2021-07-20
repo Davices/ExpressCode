@@ -15,8 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Admin\Model\Input\" />
-    <Folder Include="Admin\ModuleElement\InPut\" />
     <Folder Include="Admin\User\Input\" />
   </ItemGroup>
 

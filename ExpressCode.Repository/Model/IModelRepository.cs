@@ -12,5 +12,9 @@ namespace ExpressCode.Repository.Model
     public interface IModelRepository
     {
        List<ModelEntity> ModelShow();
+        int ModulePut(ModelEntity me);
+        int ModuleAdd(ModelEntity me);
+        int ModuleDel(string ModuleId);
+
     }
 }
